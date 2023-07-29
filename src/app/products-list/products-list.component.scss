@@ -1,0 +1,11 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    gap: 80px;
+
+    h2 {
+        font-weight: 500;
+    }
+}

@@ -5,16 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LogoSvgComponent } from './navbar/logo-svg/logo-svg.component';
+import { ProductsListModule } from './products-list/products-list.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    LogoSvgComponent
+    LogoSvgComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ProductsListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
