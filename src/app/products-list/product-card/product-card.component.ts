@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from 'src/app/product';
 
 @Component({
   selector: 'app-product-card',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent {
+  @Input() product!: Product;
 
+  readonly BASE_IMG_URL: string = "assets/images/";
+
+  getImageUrl():string{
+    return this.BASE_IMG_URL+this.product.image;
+  }
 }

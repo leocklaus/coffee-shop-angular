@@ -1,5 +1,5 @@
 <article>
-    <img src="assets/images/product2.png" alt="Coffee Picture">
-    <span class="name">COFFEE WITH MILK</span>
-    <span class="value">$3.7</span>
+    <img [src]="getImageUrl()" alt="{{product.name}}">
+    <span class="name">{{product.name}}</span>
+    <span class="value">{{product.value}}</span>
 </article>

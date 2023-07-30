@@ -1,1 +1,6 @@
-<app-product-card></app-product-card>
+<section>
+    <app-product-card
+    *ngFor="let product of products"
+    [product]="product">
+    </app-product-card>
+</section>
