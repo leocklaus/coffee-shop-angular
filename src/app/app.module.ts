@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LogoSvgComponent } from './navbar/logo-svg/logo-svg.component';
 import { ProductsListModule } from './products-list/products-list.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LogoSvgComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
