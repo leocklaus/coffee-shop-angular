@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product } from 'src/app/product';
-import { ProductService } from 'src/app/products-list/product.service';
+import { Product } from '../model/product';
+import { ProductService } from 'src/app/products-list/service/product.service';
 
 @Component({
   selector: 'app-products-grid',
