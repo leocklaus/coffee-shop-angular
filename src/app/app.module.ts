@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LogoSvgComponent } from './navbar/logo-svg/logo-svg.component';
 import { ProductsListModule } from './products-list/products-list.module';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ProductsListModule
+    ProductsListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

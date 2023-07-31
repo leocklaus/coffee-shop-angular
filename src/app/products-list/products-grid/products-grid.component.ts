@@ -1,38 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Product } from 'src/app/product';
+import { ProductService } from 'src/app/products-list/product.service';
 
 @Component({
   selector: 'app-products-grid',
   templateUrl: './products-grid.component.html',
   styleUrls: ['./products-grid.component.scss']
 })
-export class ProductsGridComponent {
+export class ProductsGridComponent implements OnInit{
 
-  products: Product[] = [
-    {
-      id: 1,
-      name: "COFFEE WITH MIL",
-      value: "$3.7",
-      image: "product1.png"
-    },
-    {
-      id: 2,
-      name: "COFFEE WITH MIL",
-      value: "$3.7",
-      image: "product2.png"
-    },
-    {
-      id: 3,
-      name: "COFFEE WITH MIL",
-      value: "$3.7",
-      image: "product3.png"
-    },
-    {
-      id: 4,
-      name: "COFFEE WITH MIL",
-      value: "$3.7",
-      image: "product4.png"
-    },
-  ]
+  products$!: Observable<Product[]>;
+
+  constructor(private service: ProductService){
+  }
+
+  ngOnInit(): void {
+    this.products$ = this.service.getProducts();
+  }
 
 }
